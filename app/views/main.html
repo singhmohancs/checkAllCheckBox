@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h1>Check All checkbox demo</h1>
+</div>
+<ul class="list-group">
+  <li class="list-group-item active">
+    <select-all-checkbox
+      checkboxes="checkBoxes"
+      all-selected="checkBoxStates.all_selected"
+      all-clear="checkBoxStates.no_selected">
+    </select-all-checkbox>
+  </li>
+  <li class="list-group-item" data-ng-repeat="(key, checkBox) in checkBoxes">
+    <label><input type="checkbox" data-ng-model="checkBox.isSelected" /> {{checkBox.title}}</label>
+  </li>
+</ul>
